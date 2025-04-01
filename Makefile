@@ -1,3 +1,4 @@
+#adirofir123@gmail.com
 # Compiler settings
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -Wextra

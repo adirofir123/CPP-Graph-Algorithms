@@ -1,3 +1,4 @@
+//adirofir123@gmail.com
 #include <iostream>
 #include "Graph.hpp"
 #include "Algorithms.hpp"
@@ -13,9 +14,9 @@ void test_basic_graph() {
 
     try {
         g.removeEdge(2, 3); // Should throw
-        std::cout << "❌ Failed: removeEdge did not throw on missing edge\n";
+        std::cout << "Failed: removeEdge did not throw on missing edge\n";
     } catch (...) {
-        std::cout << "✅ Passed: removeEdge throws on missing edge\n";
+        std::cout << "Passed: removeEdge throws on missing edge\n";
     }
 }
 
@@ -26,9 +27,9 @@ void test_bfs() {
 
     Graph bfsTree = Algorithms::bfs(g, 0);
     if (bfsTree.hasEdge(0, 1) && bfsTree.hasEdge(1, 2)) {
-        std::cout << "✅ Passed: BFS tree includes expected edges\n";
+        std::cout << "Passed: BFS tree includes expected edges\n";
     } else {
-        std::cout << "❌ Failed: BFS tree missing expected edges\n";
+        std::cout << "Failed: BFS tree missing expected edges\n";
     }
 }
 
