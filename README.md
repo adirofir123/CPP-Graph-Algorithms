@@ -40,6 +40,10 @@ make Main    # Build main program
 
 ## How to run Tests
 
+This project uses [doctest](https://github.com/doctest/doctest) for unit testing.
+
+To run the tests:
+
 ```bash
 make test    # Run unit tests (see test.cpp)
 ```
