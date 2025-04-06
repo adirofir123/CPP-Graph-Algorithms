@@ -88,6 +88,12 @@ TEST_CASE("Dijkstra returns correct shortest paths") {
     CHECK(tree.hasEdge(2, 3));
 }
 
+TEST_CASE("Dijkstra throws on negative edge weight") {
+    Graph g(3);
+    g.addEdge(0, 1, -4);  // illegal for Dijkstra
+    CHECK_THROWS_AS(Algorithms::dijkstra(g, 0), std::invalid_argument);
+}
+
 TEST_CASE("Prim returns minimum spanning tree") {
     Graph g(4);
     g.addEdge(0, 1, 4);
