@@ -7,9 +7,10 @@ CXXFLAGS = -std=c++11 -Wall -Wextra
 SRC = main.cpp Graph.cpp Algorithms.cpp Queue.cpp PriorityQueue.cpp UnionFind.cpp
 TARGET = Main
 
-# Build the demo program
+# Build the program
 Main: $(SRC)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC) 
+	./Main
 
 # Build and run unit tests
 test: test.cpp Graph.cpp Algorithms.cpp Queue.cpp PriorityQueue.cpp UnionFind.cpp

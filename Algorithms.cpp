@@ -216,7 +216,7 @@ namespace graph
         Graph mst(n);
         UnionFind uf(n);
 
-        // Step 1: Collect all edges
+        // Collect all edges
         int edgeCapacity = n * (n - 1) / 2;
         Edge *edges = new Edge[edgeCapacity];
         int edgeCount = 0;
@@ -232,10 +232,10 @@ namespace graph
             }
         }
 
-        // Step 2: Sort edges by weight
+        // Sort edges by weight
         sortEdges(edges, edgeCount);
 
-        // Step 3: Add safe edges
+        // Add safe edges
         for (int i = 0; i < edgeCount; ++i)
         {
             int u = edges[i].u;
